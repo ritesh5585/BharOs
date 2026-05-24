@@ -1,6 +1,7 @@
 import { FcFolder, FcDocument } from "react-icons/fc";
-import {  FaSpotify, FaEdge } from "react-icons/fa";
-import { Terminal, Settings } from "lucide-react";
+import { FaSpotify, FaEdge, FaWhatsapp } from "react-icons/fa";
+import { Terminal, Settings, } from "lucide-react";
+import { SiWhatsapp, SiDiscord, SiBrave } from "react-icons/si";
 
 export const icons = [
   {
@@ -12,6 +13,11 @@ export const icons = [
     id: 2,
     name: "Notes",
     Icon: FcDocument,
+  },
+  {
+    id: 3,
+    name: "Whatsapp",
+    Icon: SiWhatsapp,
   },
   {
     id: 4,
@@ -37,4 +43,11 @@ export const icons = [
     Icon: Settings,
     color: "#E6E6E6",
   },
+  {
+    id: 8,
+    name: "Settings",
+    Icon: SiDiscord,
+    color: "#5865F2",
+  },
+
 ];

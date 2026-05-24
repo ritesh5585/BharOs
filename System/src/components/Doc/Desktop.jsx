@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import DesktopIcon from "./DesktopIcon.jsx";
-import { icons } from "../utils/Icon.js";
-import "../Styles/desktop.scss";
+import { icons } from "../../utils/Icon.js";
+import "../../Styles/desktop.scss";
 
 const MAX_SCALE = 1.5;
 const NEIGHBOR_RANGE = 2;

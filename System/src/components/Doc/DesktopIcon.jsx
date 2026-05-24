@@ -1,6 +1,13 @@
 import React from "react";
 
-const DesktopIcon = ({ Icon, name, color, scale = 1, onMouseEnter, onMouseLeave }) => {
+const DesktopIcon = ({
+  Icon,
+  name,
+  color,
+  scale = 1,
+  onMouseEnter,
+  onMouseLeave,
+}) => {
   return (
     <div
       className="icon-wrapper"
