@@ -1,14 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../Styles/Navbar.scss";
 import DateTime from "./DateTime";
-import {
-  Wifi,
-  Battery,
-  Search,
-  Volume2,
-  Sun,
-  BluetoothConnected,
-} from "lucide-react";
+import Battery from "./Doc/Battery";
+import { Wifi, Search, Volume2, Sun, BluetoothConnected } from "lucide-react";
 
 const menuData = {
   File: [
@@ -190,13 +184,7 @@ const Nav = () => {
           <div className="status-icon">
             <Sun size={14} strokeWidth={2} />
           </div>
-          <div className="status-icon battery-icon">
-            <Battery size={16} strokeWidth={2} />
-            <span className="battery-text">100%</span>
-          </div>
-          <div className="status-icon">
-            <Search size={14} strokeWidth={2} />
-          </div>
+          <Battery />
         </div>
         <DateTime />
       </div>

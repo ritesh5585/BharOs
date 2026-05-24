@@ -7,6 +7,7 @@ const DesktopIcon = ({
   scale = 1,
   onMouseEnter,
   onMouseLeave,
+  onClick,
 }) => {
   return (
     <div
@@ -14,6 +15,7 @@ const DesktopIcon = ({
       style={{ transform: `scale(${scale})` }}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
+      onClick={onClick}
     >
       <div className="icon-bg">
         <Icon size={42} color={color} />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./app.scss";
 import Docs from "./components/Doc/Docs";
 import Nav from "./components/Nav";
@@ -6,7 +6,7 @@ import Nav from "./components/Nav";
 const App = () => {
   return (
     <main>
-      <Nav/>
+      <Nav />
       <Docs />
     </main>
   );

@@ -1,10 +1,12 @@
 import React from "react";
 import Desktop from "./Desktop";
+import SearchPanel from "./SearchPanel";
 
-const Docs = () => {
+const Docs = ({ openWindow }) => {
   return (
     <div className="doc">
-      <Desktop />
+      <SearchPanel />
+      <Desktop openWindow={openWindow} />
     </div>
   );
 };

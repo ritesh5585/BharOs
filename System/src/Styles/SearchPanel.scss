@@ -1,0 +1,146 @@
+.search-panel-container {
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  width: 600px;
+  max-width: 90vw;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+
+  &.open {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .google-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: 600;
+    font-family: "Product Sans", Roboto, sans-serif;
+    letter-spacing: -2px;
+
+    span:nth-child(1) { color: #4285F4; } /* G */
+    span:nth-child(2) { color: #EA4335; } /* o */
+    span:nth-child(3) { color: #FBBC05; } /* o */
+    span:nth-child(4) { color: #4285F4; } /* g */
+    span:nth-child(5) { color: #34A853; } /* l */
+    span:nth-child(6) { color: #EA4335; } /* e */
+  }
+
+  .search-form {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    padding: 10px 20px;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    transition: box-shadow 0.2s;
+
+    &:hover, &:focus-within {
+      box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+      border-color: rgba(223, 225, 229, 0);
+    }
+
+    .search-icon {
+      color: #9aa0a6;
+      font-size: 1.2rem;
+      margin-right: 15px;
+    }
+
+    input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 1.1rem;
+      color: #202124;
+      background: transparent;
+    }
+
+    .mic-icon {
+      color: #4285f4;
+      font-size: 1.2rem;
+      margin-left: 15px;
+      cursor: pointer;
+    }
+  }
+
+  .search-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+
+    button {
+      background-color: #f8f9fa;
+      border: 1px solid #f8f9fa;
+      border-radius: 4px;
+      color: #3c4043;
+      font-family: Roboto, arial, sans-serif;
+      font-size: 14px;
+      margin: 11px 4px;
+      padding: 0 16px;
+      line-height: 27px;
+      height: 36px;
+      min-width: 54px;
+      text-align: center;
+      cursor: pointer;
+      user-select: none;
+
+      &:hover {
+        box-shadow: 0 1px 1px rgba(0,0,0,.1);
+        background-color: #f8f9fa;
+        border: 1px solid #dadce0;
+        color: #202124;
+      }
+    }
+  }
+}
+
+.dock-arrow {
+  position: fixed;
+  bottom: 85px; /* Adjust based on dock height */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateX(-50%) translateY(-2px);
+  }
+
+  &.open {
+    transform: translateX(-50%) rotate(180deg);
+    bottom: 300px; /* Moves up with panel, or stay fixed? Let's just rotate it */
+    
+    &:hover {
+      transform: translateX(-50%) rotate(180deg) translateY(-2px);
+    }
+  }
+}

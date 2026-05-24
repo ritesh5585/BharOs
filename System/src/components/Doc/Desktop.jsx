@@ -6,7 +6,7 @@ import "../../Styles/desktop.scss";
 const MAX_SCALE = 1.5;
 const NEIGHBOR_RANGE = 2;
 
-const Desktop = () => {
+const Desktop = ({ openWindow }) => {
   const [hoveredIndex, setHoveredIndex] = useState(-1);
 
   const getScale = useCallback(
@@ -33,6 +33,7 @@ const Desktop = () => {
             scale={getScale(index)}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => {}}
+            onClick={() => openWindow && openWindow(item)}
           />
         ))}
       </div>
