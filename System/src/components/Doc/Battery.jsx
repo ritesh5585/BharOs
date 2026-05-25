@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "../../Styles/Navbar.scss";
-import { FaBatteryFull, FaBatteryHalf, FaBatteryQuarter, FaBatteryEmpty, FaBolt } from "react-icons/fa";
+import {
+  FaBatteryFull,
+  FaBatteryHalf,
+  FaBatteryQuarter,
+  FaBatteryEmpty,
+  FaBolt,
+} from "react-icons/fa";
 
 const Battery = () => {
   const [level, setLevel] = useState(100);
@@ -49,10 +55,13 @@ const Battery = () => {
   }
 
   return (
-    <div className="status-icon" style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
-      {charging && <FaBolt style={{ color: '#eab308', fontSize: '0.8em' }} />}
+    <div
+      className="status-icon"
+      style={{ display: "flex", alignItems: "center", gap: "5px" }}
+    >
+      {charging && <FaBolt style={{ color: "#eab308", fontSize: "0.8em" }} />}
       {getBatteryIcon()}
-      <span style={{ fontSize: '0.9em' }}>{level}%</span>
+      <span style={{ fontSize: "0.9em" }}>{level}%</span>
     </div>
   );
 };

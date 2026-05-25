@@ -59,7 +59,7 @@ const menuData = {
   ],
 };
 
-const Nav = () => {
+const Nav = ({ setOpenApp }) => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [menuBarActive, setMenuBarActive] = useState(false);
   const navRef = useRef(null);
@@ -153,7 +153,18 @@ const Nav = () => {
                     item.divider ? (
                       <div key={idx} className="dropdown-divider"></div>
                     ) : (
-                      <div key={idx} className="dropdown-item">
+                      <div
+                        key={idx}
+                        className="dropdown-item"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          if (item.label === "New Terminal" && setOpenApp) {
+                            setOpenApp("terminal");
+                            setActiveMenu(null);
+                            setMenuBarActive(false);
+                          }
+                        }}
+                      >
                         <span>{item.label}</span>
                         {item.shortcut && (
                           <span className="shortcut">{item.shortcut}</span>

@@ -32,9 +32,7 @@ const AppWindow = ({ title, onClose, children }) => {
       </div>
 
       {/* Body */}
-      <div className="app-window-body">
-        {children}
-      </div>
+      <div className="app-window-body">{children}</div>
     </Rnd>
   );
 };

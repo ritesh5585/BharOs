@@ -6,16 +6,18 @@ import Files from "../Apps/Files";
 
 import Terminal from "../Apps/Terminal";
 
-const Docs = () => {
-  const [openApp, setOpenApp] = useState(null);
-
+const Docs = ({ openApp, setOpenApp }) => {
   const handleOpenWindow = (item) => {
     if (item.type === "iframe" && item.url) {
       window.open(item.url, "_blank");
       return;
     }
 
-    if (item.type === "notes" || item.type === "folder" || item.type === "terminal") {
+    if (
+      item.type === "notes" ||
+      item.type === "folder" ||
+      item.type === "terminal"
+    ) {
       setOpenApp(item.type);
       return;
     }
@@ -28,15 +30,9 @@ const Docs = () => {
       <SearchPanel />
       <Desktop openWindow={handleOpenWindow} />
 
-      {openApp === "notes" && (
-        <Notes onClose={() => setOpenApp(null)} />
-      )}
-      {openApp === "folder" && (
-        <Files onClose={() => setOpenApp(null)} />
-      )}
-      {openApp === "terminal" && (
-        <Terminal onClose={() => setOpenApp(null)} />
-      )}
+      {openApp === "notes" && <Notes onClose={() => setOpenApp(null)} />}
+      {openApp === "folder" && <Files onClose={() => setOpenApp(null)} />}
+      {openApp === "terminal" && <Terminal onClose={() => setOpenApp(null)} />}
     </div>
   );
 };

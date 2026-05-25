@@ -45,9 +45,11 @@
   &.close {
     background: #ff5f57;
   }
+
   &.minimize {
     background: #febc2e;
   }
+
   &.maximize {
     background: #28c840;
   }
@@ -79,6 +81,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  min-height: 0; /* critical for nested flex children */
+  min-height: 0;
+  /* critical for nested flex children */
   overflow: hidden;
 }
