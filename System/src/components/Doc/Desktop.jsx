@@ -32,7 +32,7 @@ const Desktop = ({ openWindow }) => {
             color={item.color}
             scale={getScale(index)}
             onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => {}}
+            // onMouseLeave={() => {}}
             onClick={() => openWindow && openWindow(item)}
           />
         ))}

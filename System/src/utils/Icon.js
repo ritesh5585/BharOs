@@ -1,6 +1,6 @@
 import { FcFolder, FcDocument } from "react-icons/fc";
-import { FaSpotify, FaEdge, FaWhatsapp, FaGithub } from "react-icons/fa";
-import { SiWhatsapp, SiDiscord, SiBrave } from "react-icons/si";
+import { FaSpotify, FaEdge, FaWhatsapp, FaGithub, FaTerminal } from "react-icons/fa";
+import { SiWhatsapp, SiDiscord } from "react-icons/si";
 
 export const icons = [
   {
@@ -14,6 +14,13 @@ export const icons = [
     name: "Notes",
     Icon: FcDocument,
     type: "notes"
+  },
+  {
+    id: 8,
+    name: "Terminal",
+    Icon: FaTerminal,
+    color: "#fff",
+    type: "terminal"
   },
   {
     id: 3,
@@ -40,7 +47,7 @@ export const icons = [
     url: "https://bing.com"
   },
   {
-    id: 7,
+    id: 6,
     name: "GitHub",
     Icon: FaGithub,
     color: "#ffffff",
@@ -48,7 +55,7 @@ export const icons = [
     url: "https://github.com"
   },
   {
-    id: 8,
+    id: 7,
     name: "Discord",
     Icon: SiDiscord,
     color: "#5865F2",

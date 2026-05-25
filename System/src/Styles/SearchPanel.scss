@@ -111,7 +111,7 @@
 
 .dock-arrow {
   position: fixed;
-  bottom: 85px; /* Adjust based on dock height */
+  bottom: 88px; 
   left: 50%;
   transform: translateX(-50%);
   background: rgba(255, 255, 255, 0.2);
@@ -129,18 +129,20 @@
   color: white;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-
+  
   &:hover {
+    scale: (1.1);
     background: rgba(255, 255, 255, 0.3);
     transform: translateX(-50%) translateY(-2px);
   }
 
   &.open {
-    transform: translateX(-50%) rotate(180deg);
-    bottom: 300px; /* Moves up with panel, or stay fixed? Let's just rotate it */
+    transform: translateX(-70%) rotate(180deg);
+    bottom: 120px;
+    color: #242424c8;
     
     &:hover {
-      transform: translateX(-50%) rotate(180deg) translateY(-2px);
+      transform: translateX(-70%) rotate(180deg) translateY(5px) ;
     }
   }
 }

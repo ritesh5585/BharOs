@@ -1,0 +1,47 @@
+/* ── Notes App ── */
+
+.notes-app {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.notes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 14px;
+  background: #252525;
+  border-bottom: 1px solid #333;
+}
+
+.notes-filename {
+  font-size: 12px;
+  font-weight: 500;
+  color: #aaa;
+}
+
+.notes-status {
+  font-size: 11px;
+  color: #666;
+}
+
+.notes-editor {
+  flex: 1;
+  min-height: 0;
+  resize: none;
+  border: none;
+  outline: none;
+  padding: 14px;
+  background: #1a1a1a;
+  color: #d4d4d4;
+  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  tab-size: 4;
+
+  &::placeholder {
+    color: #555;
+  }
+}
