@@ -59,7 +59,7 @@ const menuData = {
   ],
 };
 
-const Nav = ({ setOpenApp }) => {
+const Nav = ({ openAppHandler }) => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [menuBarActive, setMenuBarActive] = useState(false);
   const navRef = useRef(null);
@@ -158,8 +158,8 @@ const Nav = ({ setOpenApp }) => {
                         className="dropdown-item"
                         onClick={(e) => {
                           e.stopPropagation();
-                          if (item.label === "New Terminal" && setOpenApp) {
-                            setOpenApp("terminal");
+                          if (item.label === "New Terminal" && openAppHandler) {
+                            openAppHandler("terminal");
                             setActiveMenu(null);
                             setMenuBarActive(false);
                           }

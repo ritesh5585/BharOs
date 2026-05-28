@@ -35,8 +35,7 @@ export const icons = [
     name: "Spotify",
     Icon: FaSpotify,
     color: "#1DB954",
-    type: "iframe",
-    url: "https://open.spotify.com/embed"
+    type: "spotify",
   },
   {
     id: 5,
